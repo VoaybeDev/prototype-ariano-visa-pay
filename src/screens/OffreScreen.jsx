@@ -106,6 +106,24 @@ export default function OffreScreen() {
             <button className="btn btn-blue" onClick={buyCard}>
               🛒 Acheter la carte
             </button>
+
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                gap: 6,
+                marginTop: 16,
+                fontSize: 22,
+                color: 'var(--gold)',
+                letterSpacing: 1,
+              }}
+            >
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+              <span>★</span>
+            </div>
           </div>
         </div>
       </div>
