@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useApp } from '../context/appContextInstance'
+import ThemeToggle from './ThemeToggle'
 
 const tabs = [
   {
@@ -147,6 +148,10 @@ export default function SidePanel() {
           Carte VISA virtuelle 100% malgache. Rechargez via Mobile Money, payez
           partout dans le monde et gérez votre carte avec une expérience moderne.
         </p>
+      </div>
+
+      <div className="desc-tools">
+        <ThemeToggle />
       </div>
 
       <div className="desc-section-label">Navigation</div>

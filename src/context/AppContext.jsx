@@ -1,6 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AppContext } from './appContextInstance'
 import { PROTECTED_SCREENS } from './appConstants'
+
+const getInitialTheme = () => {
+  if (typeof window === 'undefined') return 'dark'
+  return localStorage.getItem('app-theme') || 'dark'
+}
 
 export function AppProvider({ children }) {
   const [screen, setScreen] = useState('login')
@@ -8,6 +13,12 @@ export function AppProvider({ children }) {
   const [profilePhoto, setProfilePhoto] = useState(null)
   const [notifRead, setNotifRead] = useState(false)
   const [hasCard, setHasCard] = useState(false)
+  const [theme, setTheme] = useState(getInitialTheme)
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme)
+    localStorage.setItem('app-theme', theme)
+  }, [theme])
 
   const normalizeScreen = (id) => {
     let key = id
@@ -51,6 +62,10 @@ export function AppProvider({ children }) {
     setScreen('home')
   }
 
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -64,6 +79,9 @@ export function AppProvider({ children }) {
         hasCard,
         setHasCard,
         buyCard,
+        theme,
+        setTheme,
+        toggleTheme,
       }}
     >
       {children}
