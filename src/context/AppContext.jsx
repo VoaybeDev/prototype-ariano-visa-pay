@@ -2,23 +2,40 @@ import { useEffect, useState } from 'react'
 import { AppContext } from './appContextInstance'
 import { PROTECTED_SCREENS } from './appConstants'
 
+const THEME_KEY = 'app-theme'
+const ONBOARDING_KEY = 'ariano-onboarding-seen'
+
 const getInitialTheme = () => {
   if (typeof window === 'undefined') return 'dark'
-  return localStorage.getItem('app-theme') || 'dark'
+  return localStorage.getItem(THEME_KEY) || 'dark'
+}
+
+const getInitialOnboardingState = () => {
+  if (typeof window === 'undefined') return false
+  return localStorage.getItem(ONBOARDING_KEY) === 'true'
 }
 
 export function AppProvider({ children }) {
-  const [screen, setScreen] = useState('login')
+  const [screen, setScreen] = useState('splash')
   const [prevScreen, setPrevScreen] = useState(null)
   const [profilePhoto, setProfilePhoto] = useState(null)
   const [notifRead, setNotifRead] = useState(false)
   const [hasCard, setHasCard] = useState(false)
   const [theme, setTheme] = useState(getInitialTheme)
+  const [hasSeenOnboarding, setHasSeenOnboarding] = useState(getInitialOnboardingState)
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme)
-    localStorage.setItem('app-theme', theme)
+    localStorage.setItem(THEME_KEY, theme)
   }, [theme])
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setScreen(hasSeenOnboarding ? 'login' : 'onboarding')
+    }, 1800)
+
+    return () => window.clearTimeout(timer)
+  }, [])
 
   const normalizeScreen = (id) => {
     let key = id
@@ -66,6 +83,13 @@ export function AppProvider({ children }) {
     setTheme((prev) => (prev === 'dark' ? 'light' : 'dark'))
   }
 
+  const finishOnboarding = (destination = 'login') => {
+    setHasSeenOnboarding(true)
+    localStorage.setItem(ONBOARDING_KEY, 'true')
+    setPrevScreen('onboarding')
+    setScreen(destination)
+  }
+
   return (
     <AppContext.Provider
       value={{
@@ -82,6 +106,8 @@ export function AppProvider({ children }) {
         theme,
         setTheme,
         toggleTheme,
+        hasSeenOnboarding,
+        finishOnboarding,
       }}
     >
       {children}

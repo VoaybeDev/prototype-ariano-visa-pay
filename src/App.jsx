@@ -3,6 +3,8 @@ import { useApp } from './context/appContextInstance'
 import SidePanel from './components/SidePanel'
 
 // Screens
+import SplashScreen from './screens/SplashScreen'
+import OnboardingScreen from './screens/OnboardingScreen'
 import LoginScreen from './screens/LoginScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import OffreScreen from './screens/OffreScreen'
@@ -22,6 +24,8 @@ import AproposScreen from './screens/AproposScreen'
 import ContactScreen from './screens/ContactScreen'
 
 const SCREENS = {
+  splash: SplashScreen,
+  onboarding: OnboardingScreen,
   login: LoginScreen,
   register: RegisterScreen,
   offre: OffreScreen,
@@ -43,7 +47,7 @@ const SCREENS = {
 
 function PhoneApp() {
   const { screen } = useApp()
-  const ActiveScreen = SCREENS[screen] || LoginScreen
+  const ActiveScreen = SCREENS[screen] || SplashScreen
 
   return (
     <div className="scene">
