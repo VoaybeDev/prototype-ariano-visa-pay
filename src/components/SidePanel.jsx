@@ -104,10 +104,26 @@ Cette partie améliore la crédibilité du produit et rassure l'utilisateur.`,
 ]
 
 const features = [
-  { emoji: '🔒', title: 'Sécurité maximale', desc: 'Chiffrement AES-256 et tokenisation VISA pour protéger chaque opération.' },
-  { emoji: '⚡', title: 'Activation instantanée', desc: 'Carte prête en quelques minutes après validation.' },
-  { emoji: '🌍', title: 'Acceptée mondialement', desc: 'Utilisable partout où VISA est acceptée.' },
-  { emoji: '📱', title: 'Mobile Money intégré', desc: 'MVola, Airtel Money et Orange Money.' },
+  {
+    emoji: '🔒',
+    title: 'Sécurité maximale',
+    desc: 'Chiffrement AES-256 et tokenisation VISA pour protéger chaque opération.',
+  },
+  {
+    emoji: '⚡',
+    title: 'Activation instantanée',
+    desc: 'Carte prête en quelques minutes après validation.',
+  },
+  {
+    emoji: '🌍',
+    title: 'Acceptée mondialement',
+    desc: 'Utilisable partout où VISA est acceptée.',
+  },
+  {
+    emoji: '📱',
+    title: 'Mobile Money intégré',
+    desc: 'MVola, Airtel Money et Orange Money.',
+  },
 ]
 
 export default function SidePanel() {
@@ -128,8 +144,8 @@ export default function SidePanel() {
       <div className="desc-hero">
         <h2>Ariano VISA Pay - Prototype</h2>
         <p>
-          Carte VISA virtuelle 100% malgache. Rechargez via Mobile Money, payez partout dans
-          le monde et gérez votre carte avec une expérience moderne.
+          Carte VISA virtuelle 100% malgache. Rechargez via Mobile Money, payez
+          partout dans le monde et gérez votre carte avec une expérience moderne.
         </p>
       </div>
 
@@ -148,6 +164,7 @@ export default function SidePanel() {
                 onClick={() => handleTabClick(t.id)}
               >
                 <div className="stab-dot" />
+
                 <div className="stab-main">
                   <div className="stab-title-row">
                     <span className="stab-icon">{t.icon}</span>
@@ -155,6 +172,7 @@ export default function SidePanel() {
                   </div>
                   <div className="stab-short">{t.short}</div>
                 </div>
+
                 <div className="stab-toggle">{isOpen ? '−' : '+'}</div>
               </button>
 
@@ -162,6 +180,7 @@ export default function SidePanel() {
                 <div className="stab-desc-inline">
                   <div className="stab-desc-head">
                     <div className="stab-desc-icon">{t.icon}</div>
+
                     <div>
                       <div className="stab-desc-title">{t.label}</div>
                       <div className="stab-desc-sub">{t.short}</div>
@@ -195,8 +214,6 @@ export default function SidePanel() {
         <div>ariane@cartevisaforall.com</div>
         <div>+261 38 84 867 52</div>
       </div>
-
-      <div className="desc-footnote">© 2026 Ariano VISA Pay - v1.0.0</div>
     </aside>
   )
 }
