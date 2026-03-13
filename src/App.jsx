@@ -4,6 +4,7 @@ import SidePanel from './components/SidePanel'
 // Screens
 import LoginScreen from './screens/LoginScreen'
 import RegisterScreen from './screens/RegisterScreen'
+import OffreScreen from './screens/OffreScreen'
 import HomeScreen from './screens/HomeScreen'
 import CardScreen from './screens/CardScreen'
 import DepotScreen from './screens/DepotScreen'
@@ -22,6 +23,7 @@ import ContactScreen from './screens/ContactScreen'
 const SCREENS = {
   login: LoginScreen,
   register: RegisterScreen,
+  offre: OffreScreen,
   home: HomeScreen,
   card: CardScreen,
   depot: DepotScreen,

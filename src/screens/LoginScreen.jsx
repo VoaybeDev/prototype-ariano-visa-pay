@@ -4,7 +4,7 @@ import StatusBar from '../components/StatusBar'
 import visaLogo from '../assets/visa-logo.svg'
 
 export default function LoginScreen() {
-  const { navigate } = useApp()
+  const { navigate, hasCard } = useApp()
   const [email, setEmail] = useState(TEST_USER.email)
   const [password, setPassword] = useState(TEST_USER.password)
   const [alert, setAlert] = useState(null)
@@ -17,7 +17,7 @@ export default function LoginScreen() {
 
     if (email === TEST_USER.email && password === TEST_USER.password) {
       setAlert({ type: 'ok', msg: '✅ Connexion réussie !' })
-      setTimeout(() => navigate('home'), 800)
+      setTimeout(() => navigate(hasCard ? 'home' : 'offre'), 800)
     } else {
       setAlert({ type: 'ko', msg: '❌ Email ou mot de passe incorrect.' })
     }
@@ -102,8 +102,7 @@ export default function LoginScreen() {
         </button>
 
         <div className="auth-footer" style={{ marginTop: 20 }}>
-          Pas de compte ?{' '}
-          <span onClick={() => navigate('register')}>Créer un compte</span>
+          Pas de compte ? <span onClick={() => navigate('register')}>Créer un compte</span>
         </div>
 
         <div
