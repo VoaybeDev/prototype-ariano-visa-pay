@@ -56,7 +56,7 @@ export default function DashboardScreen() {
               marginBottom: 4,
             }}
           >
-            150 000 <span style={{ fontSize: 18, opacity: 0.6, fontWeight: 400 }}>Ar</span>
+            105 431 <span style={{ fontSize: 18, opacity: 0.6, fontWeight: 400 }}>Ar</span>
           </div>
           <div
             style={{
@@ -65,7 +65,7 @@ export default function DashboardScreen() {
               marginBottom: 18,
             }}
           >
-            ≈ $31.98 USD · taux 4 691 Ar/$
+            ≈ $22.48 USD · taux 4 691 Ar/$
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 12 }}>
             {[
@@ -87,7 +87,7 @@ export default function DashboardScreen() {
         <div className="stat-cards">
           {[
             { emoji: '💸', bg: 'rgba(239,68,68,.12)', val: '39 878', lbl: 'Dépenses (Ar)', change: '+8%', dir: 'dn' },
-            { emoji: '💰', bg: 'rgba(34,197,94,.12)', val: '150 000', lbl: 'Solde (Ar)', change: '+150k', dir: 'up' },
+            { emoji: '💰', bg: 'rgba(34,197,94,.12)', val: '105 431', lbl: 'Solde (Ar)', change: 'Actuel', dir: 'up' },
             { emoji: '🔢', bg: 'rgba(61,142,248,.12)', val: '6', lbl: 'Transactions', change: 'Ce mois', dir: 'up' },
             { emoji: '🌍', bg: 'rgba(168,85,247,.12)', val: '3', lbl: 'Marchands', change: 'Actifs', dir: 'up' },
           ].map((s) => (

@@ -51,7 +51,7 @@ export default function ProfileScreen() {
         {/* Stats */}
         <div className="prof-stats">
           {[
-            {val:'150k', lbl:'Solde Ar'},
+            {val:'105 431', lbl:'Solde Ar'},
             {val:'6',    lbl:'Transactions'},
             {val:'03/27',lbl:'Expiration'},
           ].map(s => (

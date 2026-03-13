@@ -90,9 +90,9 @@ export default function HomeScreen() {
             Solde disponible
           </div>
           <div style={{ fontSize: 36, fontWeight: 800, color: 'var(--text)', letterSpacing: -1 }}>
-            150 000 <span style={{ fontSize: 16, color: 'var(--text2)', fontWeight: 400 }}>Ar</span>
+            105 431 <span style={{ fontSize: 16, color: 'var(--text2)', fontWeight: 400 }}>Ar</span>
           </div>
-          <div style={{ fontSize: 13, color: 'var(--text2)', marginTop: 4 }}>≈ $31.98 USD</div>
+          <div style={{ fontSize: 13, color: 'var(--text2)', marginTop: 4 }}>≈ $22.48 USD</div>
           <div className="badge badge-green" style={{ marginTop: 10 }}>
             <div className="dot dot-green" />
             &nbsp;Carte active
