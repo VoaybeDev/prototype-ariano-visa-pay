@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useApp } from '../context/AppContext'
+import { useApp } from '../context/appContextInstance'
 import StatusBar from '../components/StatusBar'
 
 export default function RegisterScreen() {

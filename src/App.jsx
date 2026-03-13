@@ -1,4 +1,5 @@
-import { AppProvider, useApp } from './context/AppContext'
+import { AppProvider } from './context/AppContext'
+import { useApp } from './context/appContextInstance'
 import SidePanel from './components/SidePanel'
 
 // Screens

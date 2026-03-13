@@ -1,30 +1,6 @@
-import { createContext, useContext, useState } from 'react'
-
-const AppContext = createContext(null)
-
-export const TEST_USER = {
-  email: 'rakoto.jean@gmail.com',
-  password: 'Password1234',
-  name: 'Rakoto Jean',
-  initials: 'RJ',
-}
-
-const PROTECTED_SCREENS = [
-  'home',
-  'card',
-  'depot',
-  'retrait',
-  'notif',
-  'dashboard',
-  'profile',
-  'infoperso',
-  'notif-settings',
-  'securite',
-  'legal',
-  'logout',
-  'apropos',
-  'contact',
-]
+import { useState } from 'react'
+import { AppContext } from './appContextInstance'
+import { PROTECTED_SCREENS } from './appConstants'
 
 export function AppProvider({ children }) {
   const [screen, setScreen] = useState('login')
@@ -94,5 +70,3 @@ export function AppProvider({ children }) {
     </AppContext.Provider>
   )
 }
-
-export const useApp = () => useContext(AppContext)

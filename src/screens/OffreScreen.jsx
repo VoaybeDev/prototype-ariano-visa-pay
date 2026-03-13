@@ -1,5 +1,5 @@
 import StatusBar from '../components/StatusBar'
-import { useApp } from '../context/AppContext'
+import { useApp } from '../context/appContextInstance'
 
 export default function OffreScreen() {
   const { buyCard } = useApp()

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { useApp, TEST_USER } from '../context/AppContext'
+import { useApp } from '../context/appContextInstance'
+import { TEST_USER } from '../context/appConstants'
 import StatusBar from '../components/StatusBar'
 import visaLogo from '../assets/visa-logo.svg'
 
