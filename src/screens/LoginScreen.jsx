@@ -32,12 +32,16 @@ export default function LoginScreen() {
         <div className="auth-logo">
           <div
             style={{
-              width: 110,
-              height: 70,
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
               justifyContent: 'center',
-              margin: '0 auto 14px',
+              margin: '0 auto 18px',
+              borderRadius: 22,
+              overflow: 'hidden',
+              background: 'rgba(255,255,255,.08)',
+              border: '1px solid rgba(61,142,248,.18)',
+              width: 240,
+              padding: 0,
             }}
           >
             <img
@@ -45,9 +49,9 @@ export default function LoginScreen() {
               alt="Visa Pay Logo"
               style={{
                 width: '100%',
-                height: '100%',
-                objectFit: 'contain',
+                height: 'auto',
                 display: 'block',
+                borderRadius: 16,
               }}
             />
           </div>
@@ -103,7 +107,8 @@ export default function LoginScreen() {
         </button>
 
         <div className="auth-footer" style={{ marginTop: 20 }}>
-          Pas de compte ? <span onClick={() => navigate('register')}>Créer un compte</span>
+          Pas de compte ?{' '}
+          <span onClick={() => navigate('register')}>Créer un compte</span>
         </div>
 
         <div
