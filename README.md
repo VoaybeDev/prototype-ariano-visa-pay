@@ -1,55 +1,78 @@
 # 💳 Ariano VISA Pay - Prototype
 
-Prototype front-end d'une application fintech moderne permettant de gérer une carte VISA virtuelle à Madagascar.
+Prototype front-end d'une application fintech moderne pour la gestion d'une carte VISA virtuelle à Madagascar.
 
-## 🔗 Démo en ligne
+## 🔗 Liens du projet
 
-- Déploiement Vercel : https://prototype-ariano-visa-pay.vercel.app/
-- Repository GitHub : https://github.com/VoaybeDev/prototype-ariano-visa-pay
+- Démo en ligne - https://prototype-ariano-visa-pay.vercel.app/
+- GitHub - https://github.com/VoaybeDev/prototype-ariano-visa-pay
 
 ## 📌 Présentation
 
-**Ariano VISA Pay** est un prototype d'interface utilisateur construit avec **React** et **Vite**.
+**Ariano VISA Pay** est un prototype d'application mobile développé avec **React** et **Vite**.
 
-L'application simule une expérience mobile réaliste autour d'une carte VISA virtuelle.  
-Elle permet de visualiser un parcours utilisateur complet :
+Le projet simule une expérience utilisateur complète autour d'une carte VISA virtuelle :
 
+- splash screen d'ouverture
+- onboarding
 - inscription
 - connexion
 - achat obligatoire de la carte
-- accès au tableau de bord
+- tableau de bord
 - recharge
 - retrait
-- consultation du profil
 - notifications
+- profil
 - pages d'information
 
-Le projet est affiché dans une maquette mobile avec un panneau descriptif à droite pour une présentation plus professionnelle sur desktop.
+L'application est affichée dans une maquette mobile avec un panneau descriptif sur desktop pour un rendu plus professionnel.
 
 ## ✨ Fonctionnalités principales
 
 - 🔐 Connexion utilisateur
 - 📝 Création de compte
-- 💳 Achat obligatoire de la carte avant accès aux fonctionnalités protégées
-- 🏠 Tableau de bord principal
+- 💳 Achat obligatoire de la carte avant accès aux écrans protégés
+- 🚀 Splash screen avec identité visuelle
+- 👋 Onboarding pour découvrir l'application
+- 🏠 Accueil avec aperçu du compte
 - 💰 Recharge de la carte
 - 📤 Retrait vers Mobile Money ou compte bancaire
 - 🔔 Notifications
 - 👤 Gestion du profil
 - ℹ️ Pages À propos et Contact
-- 📱 Interface mobile immersive dans une coque de téléphone
-- 🧭 Panneau latéral interactif avec descriptions des sections
-- 🎨 Design moderne inspiré des applications fintech
+- 🌙 Mode sombre / ☀️ mode clair
+- 📱 Interface mobile immersive
+- 🧭 Side panel interactif sur desktop
+- ✍️ Signature visuelle sous la maquette mobile
 
-## 🛡️ Parcours utilisateur actuel
+## 🛡️ Logique utilisateur actuelle
 
-Le prototype impose une logique simple :
+Le prototype impose un parcours simple :
 
-- un nouvel utilisateur doit d'abord **acheter sa carte**
-- tant que la carte n'est pas activée, l'accès aux écrans principaux est bloqué
-- après achat, l'utilisateur est redirigé vers l'accueil
+- un nouvel utilisateur doit d'abord créer un compte
+- après inscription ou première connexion, il est redirigé vers l'écran d'offre
+- l'utilisateur doit acheter sa carte VISA virtuelle
+- tant que la carte n'est pas achetée, l'accès aux écrans principaux est bloqué
+- après achat, l'utilisateur accède à l'accueil
 
-Cette logique a été ajoutée pour rendre le prototype plus réaliste.
+## 🎬 Expérience d'ouverture
+
+L'application inclut :
+
+- un **Splash Screen** pour le wow effect au lancement
+- un **Onboarding Screen** pour présenter rapidement la solution
+- une transition vers l'inscription ou la connexion
+
+Cela permet de rendre le prototype plus crédible et plus premium.
+
+## 🎨 Thème
+
+Le projet prend en charge :
+
+- **mode sombre**
+- **mode clair**
+
+Le choix du thème est mémorisé pour améliorer l'expérience utilisateur.
 
 ## 🧰 Stack technique
 
@@ -58,7 +81,7 @@ Cette logique a été ajoutée pour rendre le prototype plus réaliste.
 - 🟨 JavaScript
 - 🧱 JSX
 - 🎨 CSS
-- ▲ Vercel pour le déploiement
+- ▲ Vercel
 
 ## 📂 Structure du projet
 
@@ -72,10 +95,20 @@ prototype-ariano-visa-pay/
 │   │   ├── BottomNav.jsx
 │   │   ├── SidePanel.jsx
 │   │   ├── StatusBar.jsx
-│   │   └── SubHeader.jsx
+│   │   ├── SubHeader.jsx
+│   │   ├── TransactionRow.jsx
+│   │   ├── ThemeToggle.jsx
+│   │   └── VisaCard.jsx
 │   ├── context/
-│   │   └── AppContext.jsx
+│   │   ├── AppContext.jsx
+│   │   ├── appConstants.js
+│   │   └── appContextInstance.js
+│   ├── data/
+│   │   ├── notifications.js
+│   │   └── transactions.js
 │   ├── screens/
+│   │   ├── SplashScreen.jsx
+│   │   ├── OnboardingScreen.jsx
 │   │   ├── LoginScreen.jsx
 │   │   ├── RegisterScreen.jsx
 │   │   ├── OffreScreen.jsx
