@@ -1,50 +1,41 @@
-# prototype-ariano-visa-pay
+# 💳 Prototype Ariano VISA Pay
 
-Prototype front-end de l'application **Ariano VISA Pay**.
+Prototype front-end d'une application moderne de paiement mobile inspirée de l'univers fintech.
 
-Ce projet présente une interface moderne inspirée d'une application mobile de paiement, de carte bancaire et de gestion financière. L'objectif est de concevoir un prototype propre, fluide et réaliste pour démonstration, portfolio ou évolution vers une vraie application.
+Ce projet met en avant une interface utilisateur élégante, fluide et réaliste pour simuler une application de carte bancaire et de paiement digital.
 
-## Aperçu
+## 🚀 À propos du projet
 
-**Ariano VISA Pay** est un prototype d'interface utilisateur centré sur l'expérience mobile.  
-Le projet met en avant une présentation visuelle moderne autour de :
+**Prototype Ariano VISA Pay** est une interface construite pour représenter une application mobile de paiement.
 
-- cartes bancaires
-- paiement digital
-- consultation de solde
-- historique de transactions
-- composants UI mobiles réalistes
-- navigation simple et élégante
+L'objectif est de créer un prototype visuel moderne qui peut servir pour :
 
-## Objectifs du projet
+- un portfolio développeur
+- une démonstration de design UI
+- une base de projet React
+- une future évolution vers une vraie application fintech
 
-- créer une interface moderne et professionnelle
-- simuler une application de paiement mobile
-- construire un prototype réutilisable pour un futur développement complet
-- améliorer les compétences en React et en intégration UI
-- ajouter un projet sérieux dans un portfolio développeur
+## ✨ Fonctionnalités
 
-## Fonctionnalités
+- 📱 Interface de style application mobile
+- 💳 Carte VISA visuelle
+- 💰 Affichage du solde
+- 📊 Présentation claire des informations
+- 🧩 Composants réutilisables
+- 🎨 UI moderne et propre
+- ⚡ Expérience fluide avec React et Vite
 
-- interface de style application mobile
-- affichage de carte VISA
-- design orienté fintech
-- barre de statut réaliste
-- composants réutilisables
-- structure adaptée à une évolution future
-- prototype rapide avec une base front-end moderne
+## 🛠️ Stack technique
 
-## Stack technique
+Ce projet utilise :
 
-Ce projet utilise les technologies suivantes :
+- ⚛️ React
+- ⚡ Vite
+- 🟨 JavaScript
+- 🧱 JSX
+- 🎨 CSS
 
-- React
-- Vite
-- JavaScript
-- JSX
-- CSS
-
-## Installation
+## 📂 Installation
 
 Clone le projet :
 
