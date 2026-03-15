@@ -245,9 +245,14 @@ export default function AproposScreen() {
           <div style={{ fontSize: 12, color: 'var(--text2)', marginBottom: 4 }}>
             Notre site web
           </div>
-          <div style={{ fontSize: 14, fontWeight: 700, color: 'var(--blue)' }}>
+          <a 
+            href="https://arianovisapay.cartevisaforall.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={{ fontSize: 14, fontWeight: 700, color: 'var(--blue)', textDecoration: 'none' }}
+          >
             arianovisapay.cartevisaforall.com
-          </div>
+          </a>
         </div>
 
         <div style={{ height: 50 }} />
