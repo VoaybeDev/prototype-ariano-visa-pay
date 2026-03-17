@@ -1,5 +1,5 @@
 // SplashScreen.jsx
-import visaLogo from '../assets/visa-logo.svg'
+import visaLogo from '../assets/visa-logo.png'
 
 export default function SplashScreen() {
   return (

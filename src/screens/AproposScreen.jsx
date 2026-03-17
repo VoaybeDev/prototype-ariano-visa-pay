@@ -1,3 +1,4 @@
+//src/screens/AproposScreen.jsx
 import StatusBar from '../components/StatusBar'
 import SubHeader from '../components/SubHeader'
 import visaLogo from '../assets/visa-logo.png'

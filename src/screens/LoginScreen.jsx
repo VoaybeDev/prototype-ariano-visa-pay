@@ -1,8 +1,9 @@
+//src/screens/LoginScreen.jsx
 import { useState } from 'react'
 import { useApp } from '../context/appContextInstance'
 import { TEST_USER } from '../context/appConstants'
 import StatusBar from '../components/StatusBar'
-import visaLogo from '../assets/visa-logo.svg'
+import visaLogo from '../assets/visa-logo.png'
 
 export default function LoginScreen() {
   const { navigate, hasCard } = useApp()
